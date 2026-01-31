@@ -1,227 +1,157 @@
-# 🎫 TicketBari
+# Ticket
 
 ## Online Ticket Booking Platform (Full Stack)
 
-🔗 **Live Demo:**
-[https://ticketbari-booking-platform-client.vercel.app/](https://ticketbari-booking-platform-client.vercel.app/)
+---
+
+## 📌 Project Description
+
+**Ticket** is a production-grade **full-stack online ticket booking platform** designed and developed using the **MERN stack**. The application enables end-to-end ticket discovery, booking, payment processing, and management for multiple travel modes including **Bus, Train, Launch, and Air**.
+
+The system is architected with a **backend-first mindset**, focusing on clean REST APIs, secure authentication, role-based authorization, and scalable data handling. It simulates real-world business workflows commonly expected in **SDE-1 and Full-Stack engineering roles**.
 
 ---
 
-## 📄 Project Summary
+## 🎯 Core Engineering Goals
 
-**TicketBari** is a full-stack **Online Ticket Booking Platform** built with the **MERN stack**. The platform allows users to discover, book, and manage travel tickets, including **Bus, Train, Launch, and Plane** services.
-
-The system follows **role-based access control** and supports three distinct user roles:
-
-* **User**
-* **Vendor**
-* **Admin**
-
-Each role has its own dashboard and permissions, making the system scalable and production-ready.
+* Design scalable and maintainable backend services
+* Implement secure authentication and authorization flows
+* Build RESTful APIs following industry standards
+* Handle real-time booking and payment workflows
+* Develop modular, reusable frontend components
 
 ---
 
-## 🎯 Project Objectives
-
-* Develop a real-world ticket booking system
-* Implement secure authentication & authorization
-* Apply modern UI/UX principles
-* Integrate online payment gateway
-* Maintain clean, modular, and scalable code architecture
-
----
-
-## 👥 User Roles & Features
+## 👥 User Roles & Responsibilities
 
 ### 👤 User
 
-* Secure authentication using Firebase
-* Browse and search available tickets
-* Filter tickets by category, date, and price
-* Book tickets with Stripe payment
-* View booking history
-* Fully responsive design
+* Account creation and secure login using Firebase Authentication
+* Browse, search, and filter tickets by route, date, and price
+* Complete bookings using integrated Stripe payment gateway
+* View booking history and transaction details
+* Fully responsive user interface
 
 ### 🧑‍💼 Vendor
 
-* Vendor authentication & authorization
-* Add, update, and manage tickets
-* View ticket sales overview
-* Vendor dashboard analytics
+* Vendor authentication with restricted access controls
+* Create, update, and manage ticket listings
+* View sales data and booking statistics
+* Dedicated vendor dashboard
 
 ### 🛡 Admin
 
-* Admin authentication
+* Platform-level authentication and authorization
 * Manage users and vendors
-* Approve or block vendors
-* Monitor platform activity
-* Revenue & booking analytics with charts
+* Approve, suspend, or block vendors
+* Monitor bookings, revenue, and system activity
 
 ---
 
 ## 🛠 Technology Stack
 
-### 🔹 Frontend (Client)
+### Frontend
 
-| Category         | Technology / Package      | Purpose                     |
-| ---------------- | ------------------------- | --------------------------- |
-| Framework        | React 19                  | Frontend UI development     |
-| Routing          | React Router              | Client-side routing         |
-| Styling          | Tailwind CSS              | Utility-first CSS framework |
-| State Management | TanStack React Query      | Server-state management     |
-| HTTP Client      | Axios                     | API communication           |
-| Authentication   | Firebase                  | User authentication         |
-| Animation        | Framer Motion             | Smooth UI animations        |
-| Charts           | Recharts                  | Dashboard analytics         |
-| Forms            | React Hook Form           | Form handling & validation  |
-| Date Picker      | React Datepicker          | Date selection              |
-| UI Components    | Swiper                    | Sliders & carousels         |
-| Icons            | Lucide React, React Icons | Icon library                |
-| Alerts           | SweetAlert2               | Alert modals                |
-| Notifications    | React Toastify            | Toast notifications         |
+* **React 19** – Component-based UI development
+* **React Router** – Client-side routing
+* **Tailwind CSS** – Responsive UI styling
+* **TanStack React Query** – Server state management
+* **Firebase Auth** – Authentication
+* **Stripe** – Payment processing
+* **Recharts** – Dashboard analytics
+* **Framer Motion** – UI animations
 
----
+### Backend
 
-### 📦 Frontend NPM Packages
-
-| Package                | Version   |
-| ---------------------- | --------- |
-| react                  | ^19.2.0   |
-| react-dom              | ^19.2.0   |
-| react-router           | ^7.10.1   |
-| @tanstack/react-query  | ^5.90.12  |
-| axios                  | ^1.13.2   |
-| firebase               | ^12.6.0   |
-| tailwindcss            | ^4.1.17   |
-| @tailwindcss/vite      | ^4.1.17   |
-| motion (framer-motion) | ^12.23.25 |
-| recharts               | ^3.5.1    |
-| swiper                 | ^12.0.3   |
-| react-hook-form        | ^7.68.0   |
-| react-datepicker       | ^8.10.0   |
-| lucide-react           | ^0.556.0  |
-| react-icons            | ^5.5.0    |
-| sweetalert2            | ^11.26.3  |
-| react-toastify         | ^11.0.5   |
+* **Node.js** – Server runtime
+* **Express.js** – REST API framework
+* **MongoDB** – NoSQL database
+* **JWT** – Secure route protection
+* **Firebase Admin SDK** – Token verification
+* **Stripe API** – Payment integration
 
 ---
 
-## 🖥 Backend (Server)
+## 🔐 Security & Authorization
 
-### 🔹 Backend Technology Stack
-
-| Category       | Technology / Package | Purpose                |
-| -------------- | -------------------- | ---------------------- |
-| Runtime        | Node.js              | JavaScript runtime     |
-| Framework      | Express.js           | REST API development   |
-| Database       | MongoDB              | NoSQL database         |
-| Authentication | Firebase Admin SDK   | Token verification     |
-| Payment        | Stripe               | Online payment gateway |
-| Security       | JWT                  | Route protection       |
-| Environment    | dotenv               | Environment variables  |
-| Middleware     | cors                 | Cross-origin access    |
+* Firebase-based authentication flow
+* JWT-protected API routes
+* Role-based access control for User, Vendor, and Admin
+* Secure handling of environment variables
 
 ---
 
-### 📦 Backend NPM Packages
+## 💳 Payment & Booking Flow
 
-| Package        | Version |
-| -------------- | ------- |
-| express        | ^5.2.1  |
-| mongodb        | ^7.0.0  |
-| firebase-admin | ^13.6.0 |
-| stripe         | ^20.0.0 |
-| cors           | ^2.8.5  |
-| dotenv         | ^17.2.3 |
+* Secure Stripe checkout integration
+* Server-side payment verification
+* Persistent booking and transaction records
+* Error handling for failed or duplicate payments
 
 ---
 
-## 🔐 Security & Authentication
+## 📊 Dashboards & Analytics
 
-* Firebase Authentication
-* JWT-based route protection
-* Role-based authorization
-* Secure API endpoints
-* Environment variable protection
-
----
-
-## 💳 Payment Integration
-
-* Stripe secure checkout
-* Real-time payment validation
-* Booking & payment history tracking
+* Ticket sales and booking metrics
+* Revenue tracking
+* User and vendor activity insights
+* Interactive charts for data visualization
 
 ---
 
-## 📊 Dashboard & Analytics
-
-* Total revenue overview
-* Tickets sold & added
-* Vendor & user activity
-* Interactive charts using Recharts
-
----
-
-## 📁 Project Architecture
+## 🧱 Project Architecture
 
 ```
 Client (React)
-├── Components
-├── Pages
-├── Routes
-├── Hooks
-├── Context API
-└── UI Modules
+├── components
+├── pages
+├── routes
+├── hooks
+├── context
+└── ui
 
 Server (Node + Express)
-├── Routes
-├── Controllers
-├── Middleware
-├── Database (MongoDB)
-└── Utilities
+├── routes
+├── controllers
+├── middleware
+├── models
+└── utils
 ```
 
 ---
 
-## ⚙️ Installation Guide
+## ⚙️ Local Setup
 
-### Client Setup
+### Client
 
 ```bash
 git clone <client-repository-url>
-cd ticketbari-client
+cd ticket-client
 npm install
 npm run dev
 ```
 
-### Server Setup
+### Server
 
 ```bash
 git clone <server-repository-url>
-cd ticketbari-server
+cd ticket-server
 npm install
-npm run start
+npm start
 ```
 
-> ⚠️ Configure `.env` files with Firebase, MongoDB, and Stripe credentials.
+> Configure `.env` files for Firebase, MongoDB, JWT, and Stripe credentials.
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Future Improvements
 
-* Seat selection system
-* Ticket cancellation & refund
-* Email ticket confirmation
+* Seat selection and availability mapping
+* Ticket cancellation and refund workflows
+* Email notifications and booking confirmations
 * Multi-language support
-* Mobile application version
+* Native mobile application
 
 ---
 
-## 👨‍💻 Developer
-
-**MD. Amdad Islam**
-🎓 Software Engineering Student
-💻 MERN Stack Developer
-📍 Dhaka, Bangladesh
-
+⭐ Built to demonstrate real-world **backend logic, API design, authentication, and full-stack engineering skills** expected from an SDE-1 developer.
